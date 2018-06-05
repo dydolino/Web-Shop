@@ -78,6 +78,7 @@
 <%
     Object suma = request.getAttribute("suma");
     Object srednia = request.getAttribute("srednia");
+    
 %>
 <div style="text-align: center;"><h2>Podsumowanie:  <%=suma%></h2></div>
 <div style="text-align: center;"><h2>średnia cena: <%=srednia%></h2></div>

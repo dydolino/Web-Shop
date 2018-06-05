@@ -12,7 +12,7 @@
 </head>
 <body bgcolor="#E6E6FA">
 <div style="text-align: center;"><h1>Kup cos!</h1></div>
-<div style="text-align: center;"><a href="/index.jsp">Powrót do sklepu</a></div>
+<div style="text-align: center;"><a href="/index.jsp"style="color: #cc1111">Powrót do sklepu</a></div>
 
 </body>
 </html>

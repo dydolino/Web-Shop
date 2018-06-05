@@ -23,25 +23,25 @@ public class Controler extends HttpServlet {
         String cena3 = request.getParameter("cena3");
         String cena4 = request.getParameter("cena4");
 
-        List<Produkt> zakupy = new ArrayList<>();
-        Produkt.add(zakupy,produkt1,cena1);
-        Produkt.add(zakupy,produkt2,cena2);
-        Produkt.add(zakupy,produkt3,cena3);
-        Produkt.add(zakupy,produkt4,cena4);
+        List<Product> zakupy = new ArrayList<>();
+        Product.add(zakupy,produkt1,cena1);
+        Product.add(zakupy,produkt2,cena2);
+        Product.add(zakupy,produkt3,cena3);
+        Product.add(zakupy,produkt4,cena4);
 
-        Cal cal = new Cal();
+        Calculate cal = new Calculate();
 
-        double srednia =cal.average(zakupy);
-        double suma =cal.summ(zakupy);
+        double avr =cal.average(zakupy);
+        double sum =cal.summ(zakupy);
 
 
         if (cena1.isEmpty() && cena2.isEmpty() && cena3.isEmpty() && cena4.isEmpty()) {
             request.getRequestDispatcher("empty.jsp").forward(request, response);
         } else {
-            request.setAttribute("ceny",Produkt.bill(zakupy));
-            request.setAttribute("produkty",Produkt.lista(zakupy));
-            request.setAttribute("suma", suma);
-            request.setAttribute("srednia", srednia);
+            request.setAttribute("ceny",Product.bill(zakupy));
+            request.setAttribute("produkty",Product.lista(zakupy));
+            request.setAttribute("suma", sum);
+            request.setAttribute("srednia", avr);
             request.getRequestDispatcher("sum.jsp").forward(request, response);
 
         }
